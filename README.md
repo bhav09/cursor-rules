@@ -4,7 +4,7 @@
 
 To implement this Standard Operating Procedure (SOP) in your AI IDE (Cursor, Windsurf, Antigravity, etc.):
 
-1. **Global Rules**: Open your IDE settings (e.g., Cursor Settings -> Rules and Commands -> User Rules) and paste the entire content of `cursorrules.txt`.
+1. **Global Rules**: Open your IDE settings (e.g., Cursor Settings -> Rules and Commands -> User Rules) and paste the entire content of `cursorrules.txt`. These rules are tuned for small, cost-efficient models like GPT-5.1 mini/nano, so pair this step with a tiny model for the biggest savings.
 2. **Workspace Folder**: Copy the `rules/` folder from this repository into the root of your project workspace. Maintain the directory structure (`rules/mvp/` and `rules/production/`).
 3. **Repository Hygiene**: Ensure your project has the `.gitignore` and `.cursorignore` files provided in this repository to prevent the AI from processing unnecessary files.
 
