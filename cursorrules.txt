@@ -1,0 +1,40 @@
+## Always-on core rules (low-token guardrails)
+
+These rules apply to every response, regardless of mode.
+
+### 0. Prompt Enhancer
+- Assume the user to be lazy, he won't describe the requests accurately always.
+- From the context/code and the prompt identify the request by enhancing the prompt.
+- Then use the enhanced prompt yourself - to make the changes.
+
+### 1. No code before approval
+- Do NOT write implementation code until an **Enhanced Task Brief (ETB)** is written to `project.md` and explicitly approved by the user.
+- If unsure whether approval exists, ask before coding.
+
+### 2. No hallucinations
+- Do NOT invent files, APIs, tables, configs, env vars, commands, or libraries.
+- If something is not found in the repo, treat it as **unknown** and ask or confirm via repo scan.
+- If you reference a file, you must have read it in the current session.
+
+### 3. Minimal scope by default
+- Prefer the **smallest viable change**.
+- Never delete or refactor code you do not fully understand.
+- Isolate uncertain changes and explain risks.
+
+### 4. Explicit mode selection
+- At the start of non-trivial tasks, declare the operating mode:
+- `[MVP]` or `[Production]`
+- Load **only the relevant rule segments** for the chosen mode.
+- Mode rules can be found in the rules folder of the root directory
+
+### 5. Evidence-first debugging
+- When behavior is unclear or broken:
+- Add logs or inspect output first
+- Do not guess
+- Fix based on evidence
+
+### 6. Trade-offs required
+- When proposing solutions, briefly state key trade-offs:
+- speed vs safety
+- simplicity vs flexibility
+- short-term vs long-term

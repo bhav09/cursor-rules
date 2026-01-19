@@ -1,0 +1,46 @@
+# Folders to ignore for AI context to save tokens and improve focus
+
+# Large dependency folders
+node_modules/
+.venv/
+venv/
+env/
+
+# Build and output directories
+dist/
+build/
+out/
+.next/
+.nuxt/
+target/
+bin/
+obj/
+
+# Media and Assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.mp4
+*.webm
+*.pdf
+*.zip
+*.tar.gz
+
+# Cache and temporary files
+.cache/
+.npm/
+.eslintcache
+*.log
+
+# Version control
+.git/
+
+# Sensitive data
+.env
+.env.*
+secrets.*
+*.pem
+*.key
+
